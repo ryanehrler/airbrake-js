@@ -8,7 +8,6 @@ import { Scope } from './scope';
 import { espProcessor } from './processor/esp';
 import { Processor } from './processor/processor';
 
-import { angularMessageFilter } from './filter/angular_message';
 import { makeDebounceFilter } from './filter/debounce';
 import { Filter } from './filter/filter';
 import { ignoreNoiseFilter } from './filter/ignore_noise';
@@ -54,7 +53,6 @@ export class BaseNotifier {
     this.addFilter(ignoreNoiseFilter);
     this.addFilter(makeDebounceFilter());
     this.addFilter(uncaughtMessageFilter);
-    this.addFilter(angularMessageFilter);
 
     this.addFilter((notice: INotice): INotice | null => {
       notice.context.notifier = {

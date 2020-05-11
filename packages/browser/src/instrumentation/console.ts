@@ -1,4 +1,4 @@
-import { IFuncWrapper } from '../func_wrapper';
+import { IFuncWrapper } from '@airbrake/core';
 import { Notifier } from '../notifier';
 
 const CONSOLE_METHODS = ['debug', 'log', 'info', 'warn', 'error'];

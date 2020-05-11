@@ -1,13 +1,17 @@
 import Promise from 'promise-polyfill';
-import { BaseNotifier } from './base_notifier';
-import { windowFilter } from './filter/window';
+import {
+  BaseNotifier,
+  windowFilter,
+  INotice,
+  IInstrumentationOptions,
+  IOptions,
+} from '@airbrake/core';
 import { instrumentConsole } from './instrumentation/console';
 import { instrumentDOM } from './instrumentation/dom';
 import { instrumentFetch } from './instrumentation/fetch';
 import { instrumentLocation } from './instrumentation/location';
 import { instrumentXHR } from './instrumentation/xhr';
-import { INotice } from './notice';
-import { IInstrumentationOptions, IOptions } from './options';
+import { angularMessageFilter } from './filter/angular_message';
 
 interface ITodo {
   err: any;
@@ -30,6 +34,7 @@ export class Notifier extends BaseNotifier {
     }
 
     this.addFilter(windowFilter);
+    this.addFilter(angularMessageFilter);
 
     if (window.addEventListener) {
       this.onOnline = this.onOnline.bind(this);

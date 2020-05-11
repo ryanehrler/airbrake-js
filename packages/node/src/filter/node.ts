@@ -1,4 +1,4 @@
-import { INotice } from '@airbrake/browser';
+import { INotice } from '@airbrake/core';
 import { NOTIFIER_NAME, NOTIFIER_VERSION, NOTIFIER_URL } from '../version';
 
 const os = require('os');

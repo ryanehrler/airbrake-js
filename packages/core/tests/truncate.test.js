@@ -49,10 +49,10 @@ describe('truncate', () => {
   });
 
   it('sets object type', () => {
-    let e = new Event('load');
+    let foo = new Map();
 
-    let got = truncate(e);
-    expect(got.__type).toBe('Event');
+    let got = truncate(foo);
+    expect(got.__type).toBe('Map');
   });
 
   describe('when called with object with circular references', () => {

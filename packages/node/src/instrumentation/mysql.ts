@@ -1,4 +1,4 @@
-import { QueryInfo } from '@airbrake/browser';
+import { QueryInfo } from '@airbrake/core';
 import { Notifier } from '../notifier';
 
 const SPAN_NAME = 'sql';

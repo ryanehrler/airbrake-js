@@ -1,6 +1,6 @@
 {
-  "name": "@airbrake/browser",
-  "version": "2.1.8",
+  "name": "airbrake-browser-esm",
+  "version": "2.1.7",
   "description": "Official Airbrake notifier for browsers",
   "author": "Airbrake",
   "license": "MIT",

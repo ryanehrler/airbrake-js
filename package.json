@@ -16,7 +16,7 @@
     "clean": "lerna run clean",
     "lint": "lerna run lint",
     "test": "lerna run test",
-    "publish": "lerna publish -c"
+    "publish": "lerna publish -c --force-publish"
   },
   "workspaces": [
     "packages/*"
